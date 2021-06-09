@@ -1,0 +1,31 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   int d=28;
+   int kucuk=0;
+   int toplam [d-1];
+   int m=d;
+   printf("Sayilar :\n");
+   for (int i=0;i<d;i++)
+   {
+       toplam[i]=m*10+i;
+       m--;
+        printf("%d",toplam[i]);
+        printf(" \n");
+   }
+   for (int i=0;i<d;i++)
+   {
+       if(i>d-1)
+       break;
+       if(toplam[i]<toplam[i+1])
+       kucuk=toplam[i];
+       else
+       kucuk=toplam[i+1];
+       kucuk=toplam[i];
+   }    
+
+    printf("Sonuc:%d",kucuk);
+    
+    return 0;
+}
